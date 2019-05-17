@@ -1,5 +1,82 @@
 @import "bootstrap";
+@import "fonts";
+
+.main {
+	margin: 10px;
+}
 
 .clear {
   clear: both;
+}
+
+.circle {
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    border-radius: 100%;
+    background: #145a98;
+    border: 1px solid #F7F7F7;
+    width: 140px;
+    height: 100px;
+    margin: 10px 10px;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    transform: rotate(11deg);
+    -ms-transform: rotate(11deg); /* IE 9 */
+    -webkit-transform: rotate(11deg); /* Opera, Chrome, and Safari */
+}
+
+.slogan {
+  font-family: "Luckiest Guy", cursive;
+  font-style: italic;
+  font-size: 25px;
+  padding-top: 26px;
+}
+
+.links {
+	padding-top: 26px;
+}
+
+.links a {
+	font-weight: bold;
+    font-style: italic;
+	color: #FFF;
+	border: 1px solid #F7F7F7;
+	border-radius: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #145a98;
+}
+
+header {
+	border-top: 9px solid #222222;
+}
+
+hr {
+	clear: both;
+}
+
+h1 {
+	font-family: 'kaushan_scriptregular', cursive;
+	font-weight: 400;
+	letter-spacing: -1.5px;
+	font-size: 35px;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  font-size: 18px;
+}
+
+ul {
+	list-style: none;
+	transform: rotate(11deg);
+    -ms-transform: rotate(11deg); /* IE 9 */
+    -webkit-transform: rotate(11deg); /* Opera, Chrome, and Safari */
+	margin-top: 30px;
 }
