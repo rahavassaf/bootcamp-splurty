@@ -19,6 +19,9 @@ class QuotesController < ApplicationController
 		redirect_to new_quote_url
 	end
 
+	def about
+	end
+
 	private
 	
 
