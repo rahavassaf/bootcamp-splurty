@@ -4,13 +4,19 @@ class QuotesController < ApplicationController
 	end
 
 	def new
-		@success = params[:success]
 		@quote = Quote.new
 	end
 
 	def create
-		Quote.create(quote_params)
-		redirect_to new_quote_url(:success => 'true')
+		@quote = Quote.create(quote_params)
+		
+		if @quote.invalid?
+    		flash[:error] = 'Could not save: the data you entered is invalid.'
+    	else
+    		flash[:success] = 'Quote saved.'
+		end
+
+		redirect_to new_quote_url
 	end
 
 	private
