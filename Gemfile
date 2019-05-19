@@ -5,6 +5,7 @@ ruby '2.5.3'
 
 # splurty
 gem 'jquery-rails'
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
