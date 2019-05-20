@@ -1,18 +1,24 @@
-<h2>
-	<span>SPLURTY / N. <%= @quote.id %></span>
-	&nbsp;&nbsp;Here's the <u>best unsolicited startup advice</u> you can get!
-</h2>
+<% if @quote != nil %>
+	<h2>
+		<span>SPLURTY / N. <%= @quote.id %></span>
+		&nbsp;&nbsp;Here's the <u>best unsolicited startup advice</u> you can get!
+	</h2>
 
-<br class="clear">
-<br>
+	<br class="clear">
+	<br>
 
-<h1><%= @quote.saying %></h1>
-<h2 class="float-right">- <%= @quote.author %></h2>
+	<h1><%= @quote.saying %></h1>
+	<h2 class="float-right">- <%= @quote.author %></h2>
 
-<% if @quote.youtube_id != "" %>
-<br><br>
-<iframe src="https://www.youtube.com/embed/<%= @quote.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<% if @quote.youtube_id != "" %>
+	<br><br>
+	<iframe src="https://www.youtube.com/embed/<%= @quote.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<% end %>
+
+	<br class="clear">
+	<br>
+<% else %>
+	<h1>We appear to have run out of inspirational quotes, but feel free to contribute your own!</h1>
+	<br>
+	<%= image_tag 'broken.jpg', class: 'img-fluid' %>
 <% end %>
-
-<br class="clear">
-<br>

@@ -11,6 +11,7 @@
 
 .clear {
   clear: both;
+  border-style: none;
 }
 
 .circle {
@@ -53,7 +54,7 @@
 }
 
 .links {
-	padding-top: 26px;
+	padding-top: 8px;
 }
 
 .next-quote {
@@ -103,7 +104,6 @@
 }
 
 header {
-	border-top: 9px solid #222222;
   background-color: #bbbbbb;
   border-bottom-style: solid;
   border-bottom-width: 3px;
@@ -168,4 +168,14 @@ table {
   border-style: solid;
   border-width: 1px;
   padding: 5px;
+}
+
+.deletebutton {
+  background-color: #f70920;
+  border-style: solid;
+  border-color: #333333;
+  border-width: 1;
+  border-radius: 8px;
+  cursor: pointer;
+
 }

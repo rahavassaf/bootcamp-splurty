@@ -1,25 +1,25 @@
 <div class="row tableheader">
-	<div class="col-1">ID</div>
 	<div class="col-3">Author</div>
 	<div class="col-5">Quote</div>
 	<div class="col-2">Youtube ID</div>
-	<div class="col-1">Delete</div>
+	<div class="col-1">ID</div>
 </div>
 
 
 <% @all.each do |quote| %>
 	<div class="row tablerow">
-	<div class="col-1"><%= quote.id %></div>
+		<div class="col-3"><%= quote.author %></div>
 	
-	<div class="col-3"><%= quote.author %></div>
-	
-	<div class="col-5"><%= quote.saying %></div>
+		<div class="col-5"><%= quote.saying %></div>
 
-	<div class="col-2">
-	<%= link_to_if(quote.youtube_id != '', quote.youtube_id, "https://youtube.com/watch?v=#{quote.youtube_id}", target: :_blank) %>
-	</div>
+		<div class="col-2">
+		<%= link_to_if(quote.youtube_id != '', quote.youtube_id, "https://youtube.com/watch?v=#{quote.youtube_id}", target: :_blank) %>
+		</div>
 
-	<div class="col-1">X</div>
+		<div class="col-1">
+			<%= quote.id %>
+			<%= button_to "Del", { action: "destroy", id: quote.id }, method: :delete, class: "deletebutton" %>
+		</div>
 	</div>
 <% end %>
 
