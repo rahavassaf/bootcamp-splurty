@@ -3,10 +3,6 @@ class QuotesController < ApplicationController
 		@quote = Quote.order("RANDOM()").first
 	end
 
-	def new
-		@quote = Quote.new
-	end
-
 	def create
 		@quote = Quote.create(quote_params)
 		
@@ -16,7 +12,7 @@ class QuotesController < ApplicationController
     		flash[:success] = 'Quote saved.'
 		end
 
-		redirect_to new_quote_url
+		redirect_to request.referrer
 	end
 
 	def about
