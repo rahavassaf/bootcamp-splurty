@@ -38,7 +38,7 @@
   font-family: "Luckiest Guy", cursive;
   font-style: italic;
   font-size: 25px;
-  padding-top: 26px;
+  padding-top: 5px;
 }
 
 .about {
@@ -69,8 +69,7 @@
 	color: #FFF;
 	border: 2px solid #24bc26;
 	border-radius: 20px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 0px 20px 3px 20px; 
 	background-color: #145a98;
 }
 
@@ -171,11 +170,19 @@ table {
 }
 
 .deletebutton {
-  background-color: #f70920;
-  border-style: solid;
-  border-color: #333333;
-  border-width: 1;
-  border-radius: 8px;
+  border-style: none;
   cursor: pointer;
+  width: 25px;
+  height: 33px;
+  background-image: url('delete.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: inherit;
+}
 
+.flexwrap {
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  max-width: 98%;
 }
