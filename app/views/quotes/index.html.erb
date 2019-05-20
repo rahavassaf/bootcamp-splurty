@@ -9,5 +9,10 @@
 <h1><%= @quote.saying %></h1>
 <h2 class="float-right">- <%= @quote.author %></h2>
 
+<% if @quote.youtube_id != "" %>
+<br><br>
+<iframe src="https://www.youtube.com/embed/<%= @quote.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<% end %>
+
 <br class="clear">
 <br>

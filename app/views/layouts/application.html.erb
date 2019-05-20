@@ -27,6 +27,8 @@
             <br>
             <%= f.input :author, label: "Who said it?", placeholder: "Anonymous Darwin award winner" %>
             <br>
+            <%= f.input :youtube_id, label: "YouTube ID" %>
+            <br>
             <%= f.submit 'Create', class: 'btn btn-info', style:'background-color: #145a98; border-color: #24bc26;' %>
             </div>
           <% end %>
@@ -57,6 +59,8 @@
         <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
         &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
+        &nbsp;&nbsp;
+        <%= link_to 'All', all_path %>
       </div>
     </header>
 

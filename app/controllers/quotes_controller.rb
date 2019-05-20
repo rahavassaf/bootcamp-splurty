@@ -18,10 +18,27 @@ class QuotesController < ApplicationController
 	def about
 	end
 
+	def all
+		@all = Quote.all
+	end
+
+	def destroy
+		id = params[:id]
+
+		if  Quote.exists?(id)
+			Quote.destroy(id)
+			flash[:success] = "Quote #{id} deleted."
+		else
+			flash[:error] = "Quote #{id} does not exist."
+		end
+
+		redirect_to request.referrer
+	end
+
 	private
 	
 
 	def quote_params
-		params.require(:quote).permit(:saying, :author)
+		params.require(:quote).permit(:saying, :author, :youtube_id)
 	end
 end
